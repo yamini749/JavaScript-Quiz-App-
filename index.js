@@ -313,7 +313,7 @@ conceptForm.addEventListener("submit", (e) => {
   e.preventDefault();
   selectedConcept = conceptInput.value.trim().toLowerCase();
   if (questionsDB[selectedConcept]) {
-    quizData = shuffleArray(questionsDB[selectedConcept]).slice(0, 5); // limit to 5 random
+    quizData = shuffleArray(questionsDB[selectedConcept]).slice(0, 10);
     currentQuestion = 0;
     score = 0;
     conceptForm.classList.add("hide");
@@ -323,9 +323,7 @@ conceptForm.addEventListener("submit", (e) => {
     restartBtn.classList.add("hide");
     timerBox.classList.remove("hide");
     loadQuestion();
-  } else {
-    alert("❌ Concept not found. Try: variables, data types, operators, functions, or objects.");
-  }
+  } 
 });
 
 function loadQuestion() {
