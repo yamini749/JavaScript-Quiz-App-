@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>🎯 JavaScript Quiz</h1>
+
+    <form id="conceptForm">
+      <select id="conceptSelect" required>
+        <option value="">Select a concept</option>
+        <option value="variables">Variables</option>
+        <option value="data types">Data Types</option>
+        <option value="functions">Functions</option>
+        <option value="arrow functions">Arrow Functions</option>
+        <option value="event listeners">Event Listeners</option>
+      </select>
+      <button type="submit">Start Quiz</button>
+    </form>
+
+    <div id="questionBox" class="hide"></div>
+    <div id="optionsBox"></div>
+    <button id="nextBtn" class="hide">Next</button>
+    <div id="scoreBox" class="hide"></div>
+    <button id="restartBtn" class="hide">Restart Quiz</button>
+    <div id="timer" class="hide">⏳ Time left: <span id="time">10</span>s</div>
+
+
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
